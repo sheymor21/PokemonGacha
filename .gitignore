@@ -709,3 +709,4 @@ coverage*[.json, .xml, .info]
 # Android studio 3.1+ serialized cache file
 
 src/App/appsettings.Development.json
+src/App/Properties/launchSettings.json
