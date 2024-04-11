@@ -22,5 +22,6 @@ public class Startup
             "mongodb://sheymor:password@localhost:27017";
         services.AddScoped<DatabaseContext>(config => new DatabaseContext(connectionString!));
         services.AddScoped<ITrainerServices, TrainerServices>();
+        services.AddScoped<IPokemonServices, PokemonServices>();
     }
 }

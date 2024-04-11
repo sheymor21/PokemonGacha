@@ -12,16 +12,24 @@ public class TrainerController : BaseController
     {
         _trainerServices = trainerServices;
     }
+
     [HttpPost]
     public async Task<ActionResult> AddTrainer(TrainerCreateRequest trainerCreateRequest)
     {
-        await _trainerServices.AddTrainer(trainerCreateRequest);
+        await _trainerServices.AddTrainerAsync(trainerCreateRequest);
         return Ok();
     }
     
-    [HttpGet]
-    public async Task<ActionResult> GetTrainer()
+    [HttpPost("Pokemon")]
+    public async Task<ActionResult> AddPokemonToTrainer(PokemonCreateRequest pokemonCreateRequest)
     {
-        return Ok(await _trainerServices.GetTrainers());
+        await _trainerServices.AddPokemonToTrainerAsync(pokemonCreateRequest);
+        return Ok();
+    }
+
+    [HttpGet]
+    public Task<ActionResult> GetTrainer()
+    {
+        return Task.FromResult<ActionResult>(Ok(_trainerServices.GetTrainersAsync()));
     }
 }
