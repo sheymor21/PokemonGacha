@@ -13,5 +13,5 @@ public class DatabaseContext
         _mongoClient = client.GetDatabase("PokemonDb");
     }
 
-    public IMongoCollection<Trainer> Trainers => _mongoClient.GetCollection<Trainer>(nameof(Trainers));
+    public IMongoCollection<Trainer> Trainers => _mongoClient.GetCollection<Trainer>(nameof(Trainers).ToLower());
 }
