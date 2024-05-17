@@ -12,6 +12,11 @@ public class PokemonController : BaseController
         _pokemonServices = pokemonServices;
     }
 
+    /// <summary>
+    /// Retrieves a Pokemon for a given trainer.
+    /// </summary>
+    /// <param name="trainerId">The ID of the trainer.</param>
+    /// <returns>A <see cref="Task{TResult}"/> representing the asynchronous operation. The task result contains the Pokemon's details as a <see cref="PokemonGetRequest"/>.</returns>
     [HttpGet]
     public async Task<ActionResult> GetPokemon(Guid trainerId)
     {

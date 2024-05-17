@@ -16,6 +16,11 @@ public class TrainerController : BaseController
         _cache = cache;
     }
 
+    /// <summary>
+    /// Adds a new trainer to the system.
+    /// </summary>
+    /// <param name="trainerCreateRequest">The request object containing the details of the trainer.</param>
+    /// <returns>An ActionResult indicating the result of the operation.</returns>
     [HttpPost]
     public async Task<ActionResult> AddTrainer(TrainerCreateRequest trainerCreateRequest)
     {
@@ -23,6 +28,11 @@ public class TrainerController : BaseController
         return Ok();
     }
 
+    /// <summary>
+    /// Adds a new Pokemon to a trainer.
+    /// </summary>
+    /// <param name="pokemonCreateRequest">The request object containing the trainer ID and the name of the Pokemon to be added.</param>
+    /// <returns>An ActionResult indicating the result of the operation.</returns>
     [HttpPost("Pokemon")]
     public async Task<ActionResult> AddPokemonToTrainer(PokemonCreateRequest pokemonCreateRequest)
     {
@@ -48,6 +58,11 @@ public class TrainerController : BaseController
         return BadRequest("You doesnt catch this pokemon yet");
     }
 
+    /// <summary>
+    /// Removes a Pokemon from a trainer.
+    /// </summary>
+    /// <param name="pokemonDeleteRequest">The request object containing the trainer ID and the name of the Pokemon to be removed.</param>
+    /// <returns>An ActionResult indicating the result of the operation.</returns>
     [HttpDelete("")]
     public async Task<ActionResult> DeletePokemonFromTrainer(PokemonDeleteRequest pokemonDeleteRequest)
     {
@@ -55,6 +70,10 @@ public class TrainerController : BaseController
         return Ok();
     }
 
+    /// <summary>
+    /// Retrieves the detailed information of a trainer.
+    /// </summary>
+    /// <returns>The detailed information of the trainer.</returns>
     [HttpGet]
     public Task<ActionResult> GetTrainer()
     {
