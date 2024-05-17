@@ -23,5 +23,6 @@ public class Startup
         services.AddScoped<DatabaseContext>(config => new DatabaseContext(connectionString!));
         services.AddScoped<ITrainerServices, TrainerServices>();
         services.AddScoped<IPokemonServices, PokemonServices>();
+        services.AddMemoryCache();
     }
 }

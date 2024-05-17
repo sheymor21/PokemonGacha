@@ -13,8 +13,8 @@ public class PokemonController : BaseController
     }
 
     [HttpGet]
-    public async Task<ActionResult> GetPokemon()
+    public async Task<ActionResult> GetPokemon(Guid trainerId)
     {
-        return Ok(await _pokemonServices.GetPokemonAsync());
+        return Ok(await _pokemonServices.GetPokemonAsync(trainerId));
     }
 }

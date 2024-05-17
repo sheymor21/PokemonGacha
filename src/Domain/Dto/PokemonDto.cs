@@ -11,6 +11,13 @@ public class PokemonGetRequest
     public string Name { get; set; } = string.Empty;
     public List<string> Type { get; set; } = new();
 }
+
+public class PokemonDeleteRequest
+{
+    public Guid TrainerId { get; set; }
+    public string PokemonName { get; set; } = string.Empty;
+}
+
 public class PokemonCreateRequest
 {
     public Guid TrainerId { get; set; }
