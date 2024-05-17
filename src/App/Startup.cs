@@ -31,8 +31,7 @@ public class Startup
             c.IncludeXmlComments(xmlPath);
         });
         string connectionString =
-            Configuration["ConnectionString"] ?? Configuration.GetConnectionString("ConnectionString") ??
-            "mongodb://sheymor:password@localhost:27017";
+            Configuration["ConnectionString"] ?? Configuration.GetConnectionString("ConnectionString")!;
         services.AddScoped<DatabaseContext>(config => new DatabaseContext(connectionString!));
         services.AddScoped<ITrainerServices, TrainerServices>();
         services.AddScoped<IPokemonServices, PokemonServices>();
