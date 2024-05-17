@@ -13,7 +13,7 @@ If you don't have .Net download from  [.NET](https://dotnet.microsoft.com/en-us/
 If you have .NET , download the project in your PC:
 
 ~~~
-git clone https://github.com/sheymor21/BookingApp.git
+git clone https://github.com/sheymor21/PokemonGacha.git
 ~~~
 
 Before running the project write at the console for restore the dependencies:
