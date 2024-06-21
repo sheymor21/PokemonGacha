@@ -1,10 +1,10 @@
 # PokemonGacha
 
-Simple API for Booking management using .Net core and Docker
+Simple API which use and manage the information of Pokemon oficial api using .Net core and Docker
 
 # Dependencies
 
-- .NET8
+- .NET core 8
 - MongoDB
 # How to Run
 
