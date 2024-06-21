@@ -1,6 +1,6 @@
 # PokemonGacha
 
-Simple API which use and manage the information of Pokemon oficial api using .Net core and Docker
+Simple API which use and manage the information of Pokémon oficial api using .Net core and Docker
 
 # Dependencies
 
@@ -50,7 +50,7 @@ If you want to see the logs when the containers are creating:
 docker compose up
 ~~~
 
-For create only the image of the aplication:
+For create only the image of the application:
 
 ~~~
 docker build .
