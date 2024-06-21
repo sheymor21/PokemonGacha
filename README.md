@@ -1,6 +1,6 @@
 # PokemonGacha
 
-Simple API which use and manage the information of Pokémon oficial api using .Net core and Docker
+Simple API which use and manage the information of Pokémon api using .Net core and Docker
 
 # Dependencies
 
